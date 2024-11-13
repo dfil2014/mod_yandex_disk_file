@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Yandex Disk File</name>
+    <author>DeoN</author>
+    <version>1.0.0</version>
+    <description>Модуль для отображения файлов Яндекс Диска</description>
+    <files>
+        <filename>mod_yandex_disk_file.xml</filename>
+        <filename module="mod_yandex_disk_file">mod_yandex_disk_file.php</filename>
+		<filename>yandex.php</filename>
+		<folder>downloads</folder>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>file.php</filename>
+    </files>
+    <config>
+        <fields name='params'>
+            <fieldset name='basic'>
+ <field name="caption" type="radio" default="1" 
+				label="Включить заголовок" description="Активируйте функцию, чтобы включить заголовок"
+				class="btn-group">
+									<option value="1">Да</option>
+									<option value="0">Нет</option>
+							</field>
+               <field name="token" type="text" default="" label="Токен Yandex.API" description="Введите здесь токен Яндекс API"/>
+               <field name="folder" type="text" default="" label="Корневая папка отображения" description="Введите начальную паку отображения"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
